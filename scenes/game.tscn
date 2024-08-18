@@ -11,10 +11,10 @@
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="Environment/CanvasLayer"]
-offset_left = 11.0
-offset_top = 2.0
+offset_left = 1.0
+offset_top = -2.0
 offset_right = 1924.0
-offset_bottom = 1079.0
+offset_bottom = 1077.0
 
 [node name="Characters" type="Node" parent="."]
 

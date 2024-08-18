@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbspp6gu8j6y"]
+[gd_scene load_steps=7 format=3 uid="uid://bbspp6gu8j6y"]
 
 [ext_resource type="Script" path="res://scripts/PlayerWizard.gd" id="1_bc7ab"]
 [ext_resource type="Texture2D" uid="uid://dfrljnxyx30q2" path="res://assets/characters/Wizard.png" id="1_kc0a2"]
+[ext_resource type="PackedScene" uid="uid://cca1rsgkew3ev" path="res://assets/spells/MagicMissile.tscn" id="3_3lpr7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqjkc"]
 atlas = ExtResource("1_kc0a2")
@@ -35,3 +36,5 @@ position = Vector2(2, 15)
 shape = SubResource("CircleShape2D_mq1fp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MagicMissile" parent="." instance=ExtResource("3_3lpr7")]

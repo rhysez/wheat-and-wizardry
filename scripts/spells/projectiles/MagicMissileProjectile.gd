@@ -1,6 +1,6 @@
 extends Area2D
 
-const MOVE_SPEED = 500
+const MOVE_SPEED = 300
 const MAX_RANGE = 1000
 const DAMAGE = 5
 

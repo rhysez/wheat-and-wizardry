@@ -21,7 +21,6 @@ func _physics_process(delta):
 	var temp_damage_rate = 5.0
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
-		print("enemy!")
 		# we take damage multiplied by how many mobs are in the collission circle.
 		health -= temp_damage_rate * overlapping_mobs.size() * delta
 		%ProgressBar.value = health

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c35knj8a7hhc1"]
 
-[ext_resource type="PackedScene" uid="uid://bbspp6gu8j6y" path="res://scenes/PlayerWizard.tscn" id="1_vgxss"]
-[ext_resource type="PackedScene" uid="uid://dcgs8ew2m7uda" path="res://scenes/VampireImp.tscn" id="2_57etg"]
+[ext_resource type="PackedScene" uid="uid://bbspp6gu8j6y" path="res://scenes/characters/PlayerWizard.tscn" id="1_vgxss"]
+[ext_resource type="PackedScene" uid="uid://dcgs8ew2m7uda" path="res://scenes/enemies/VampireImp.tscn" id="2_57etg"]
 
 [node name="Game" type="Node2D"]
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cca1rsgkew3ev"]
 
-[ext_resource type="Script" path="res://scripts/MagicMissile.gd" id="1_5vsi6"]
 [ext_resource type="Texture2D" uid="uid://dfrljnxyx30q2" path="res://assets/characters/Wizard.png" id="1_7u5ir"]
+[ext_resource type="Script" path="res://scripts/spells/MagicMissile.gd" id="1_b4ckv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ev5jm"]
 radius = 282.028
 
 [node name="MagicMissile" type="Area2D"]
-script = ExtResource("1_5vsi6")
+script = ExtResource("1_b4ckv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(5.005, 5.005)
@@ -16,9 +16,12 @@ shape = SubResource("CircleShape2D_ev5jm")
 [node name="AimPivot" type="Marker2D" parent="."]
 
 [node name="Wizard" type="Sprite2D" parent="AimPivot"]
-position = Vector2(100, -3)
-scale = Vector2(0.03, 0.03)
+position = Vector2(128, -2)
+scale = Vector2(0.035, 0.035)
 texture = ExtResource("1_7u5ir")
 
-[node name="ShootingPoint" type="Marker2D" parent="AimPivot/Wizard"]
+[node name="CastingPoint" type="Marker2D" parent="AimPivot/Wizard"]
+unique_name_in_owner = true
 position = Vector2(766.667, 100)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

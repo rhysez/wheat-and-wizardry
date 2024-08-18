@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcgs8ew2m7uda"]
 
-[ext_resource type="Script" path="res://scripts/VampireImp.gd" id="1_1kckt"]
+[ext_resource type="Script" path="res://scripts/enemies/VampireImp.gd" id="1_1kckt"]
 [ext_resource type="Texture2D" uid="uid://ch2ev1fnx2mpt" path="res://assets/enemies/VampireImp2.png" id="1_aerav"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w82ow"]
@@ -19,15 +19,16 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c7xfe"]
-radius = 44.0114
 
 [node name="VampireImp" type="CharacterBody2D"]
 script = ExtResource("1_1kckt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.13, 0.13)
+position = Vector2(0, 4)
+scale = Vector2(0.09, 0.09)
 sprite_frames = SubResource("SpriteFrames_pupx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -7)
+position = Vector2(0, -3)
+scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_c7xfe")

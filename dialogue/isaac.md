@@ -1,7 +1,7 @@
 *At this stage, Isaac is fed up of interacting with townsfolk and just wants to get on with his farm. His voice is grumpy and dry, yet intelligent. Isaac is always pondering what he will do the next day, but he is never worried. He is a hermit, yet satisfied with his arrangements. He just wants to be left alone.*
 
 **On initial spawn**\
-*Somewhat serious*  "I am a Wizard no longer... I must tend to my land."\
+*Somewhat serious*  "I am a Wizard no longer... I must tend to my land."
 
 ***WIZARD ASCENSION: LEVEL 1***\
 **During the day**\

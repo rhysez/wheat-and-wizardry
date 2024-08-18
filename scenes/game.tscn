@@ -1,20 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://c35knj8a7hhc1"]
+[gd_scene load_steps=3 format=3 uid="uid://c35knj8a7hhc1"]
 
 [ext_resource type="PackedScene" uid="uid://bbspp6gu8j6y" path="res://scenes/PlayerWizard.tscn" id="1_vgxss"]
+[ext_resource type="PackedScene" uid="uid://dcgs8ew2m7uda" path="res://scenes/VampireImp.tscn" id="2_57etg"]
 
 [node name="Game" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Environment" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Environment"]
 offset_left = -6350.0
 offset_top = -4597.0
 offset_right = 6381.0
 offset_bottom = 3998.0
-color = Color(0.290263, 0.50128, 0.310395, 1)
-
-[node name="PlayerWizard" parent="." instance=ExtResource("1_vgxss")]
-unique_name_in_owner = true
-position = Vector2(970, 542)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(962, 538)
-zoom = Vector2(0.75, 0.75)
+position = Vector2(972, 414)
+
+[node name="Characters" type="Node" parent="."]
+
+[node name="PlayerWizard" parent="Characters" instance=ExtResource("1_vgxss")]
+unique_name_in_owner = true
+position = Vector2(967, 409)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="VampireImp" parent="Enemies" instance=ExtResource("2_57etg")]
+position = Vector2(1735, 410)
+
+[node name="VampireImp2" parent="Enemies" instance=ExtResource("2_57etg")]
+position = Vector2(1510, 118)
+
+[node name="VampireImp3" parent="Enemies" instance=ExtResource("2_57etg")]
+position = Vector2(1650, 252)

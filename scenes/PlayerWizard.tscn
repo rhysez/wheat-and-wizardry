@@ -19,17 +19,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mq1fp"]
-radius = 44.0
+radius = 54.0093
 
 [node name="PlayerWizard" type="CharacterBody2D"]
 script = ExtResource("1_bc7ab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-7, -2)
-scale = Vector2(0.0806875, 0.074375)
+position = Vector2(-4, -1)
+scale = Vector2(0.09, 0.089)
 sprite_frames = SubResource("SpriteFrames_ldq0g")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 19)
+position = Vector2(2, 15)
 shape = SubResource("CircleShape2D_mq1fp")

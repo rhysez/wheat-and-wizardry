@@ -15,5 +15,5 @@ func _physics_process(delta):
 
 func take_damage(total_damage):
 	hit_points -= total_damage
-	if (hit_points == 0):
+	if (hit_points <= 0):
 		queue_free()

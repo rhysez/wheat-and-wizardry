@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfrljnxyx30q2"
-path="res://.godot/imported/Wizard.png-8d90a6af197224d4ed092606da0c0c27.ctex"
+uid="uid://b0b4vwrulrlu5"
+path="res://.godot/imported/VampireImp48.png-5296ff295d022c580b6440cf043d234d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Wizard.png"
-dest_files=["res://.godot/imported/Wizard.png-8d90a6af197224d4ed092606da0c0c27.ctex"]
+source_file="res://assets/enemies/VampireImp48.png"
+dest_files=["res://.godot/imported/VampireImp48.png-5296ff295d022c580b6440cf043d234d.ctex"]
 
 [params]
 

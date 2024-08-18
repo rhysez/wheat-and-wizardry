@@ -1,7 +1,7 @@
 extends Area2D
 
-const MOVE_SPEED = 20000
-const MAX_RANGE = 20000
+const MOVE_SPEED = 800
+const MAX_RANGE = 1000
 
 var travel_distance = 0
 

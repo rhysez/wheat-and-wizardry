@@ -7,19 +7,20 @@
 radius = 29.0689
 
 [node name="MagicMissileProjectile" type="Area2D"]
+top_level = true
 collision_layer = 0
 collision_mask = 3
 script = ExtResource("1_qvcb0")
 
 [node name="Wizard" type="Sprite2D" parent="."]
-position = Vector2(313.015, 0)
+position = Vector2(-7.26, 0)
 rotation = -0.00854886
-scale = Vector2(0.36, 0.36)
+scale = Vector2(0.07, 0.07)
 texture = ExtResource("1_dx1gn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(313.015, -4)
-scale = Vector2(13.27, 13.27)
+position = Vector2(8, -4)
+scale = Vector2(2.55, 2.55)
 shape = SubResource("CircleShape2D_gyip0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

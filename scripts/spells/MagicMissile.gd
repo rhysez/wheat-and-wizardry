@@ -15,4 +15,3 @@ func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	if (Input.is_action_just_pressed('cast_active_spell')):
 		spell_cast()
-		print("cast")

@@ -1,17 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcgs8ew2m7uda"]
+[gd_scene load_steps=5 format=3 uid="uid://dcgs8ew2m7uda"]
 
 [ext_resource type="Script" path="res://scripts/enemies/VampireImp.gd" id="1_1kckt"]
-[ext_resource type="Texture2D" uid="uid://ch2ev1fnx2mpt" path="res://assets/enemies/VampireImp2.png" id="1_aerav"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w82ow"]
-atlas = ExtResource("1_aerav")
-region = Rect2(0, 0, 1200, 1200)
+[ext_resource type="Texture2D" uid="uid://b1fw7812708wd" path="res://assets/enemies/VampiricImp100.png" id="2_kq7bs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pupx1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w82ow")
+"texture": ExtResource("2_kq7bs")
 }],
 "loop": true,
 "name": &"default",
@@ -25,7 +21,6 @@ script = ExtResource("1_1kckt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 4)
-scale = Vector2(0.09, 0.09)
 sprite_frames = SubResource("SpriteFrames_pupx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://rsqg5xr5puft"]
 
-[ext_resource type="Texture2D" uid="uid://dfrljnxyx30q2" path="res://assets/characters/Wizard.png" id="1_dx1gn"]
 [ext_resource type="Script" path="res://scripts/spells/projectiles/MagicMissileProjectile.gd" id="1_qvcb0"]
+[ext_resource type="Texture2D" uid="uid://bb2klvbfwrvvn" path="res://assets/spells/projectiles/MMProjectile100.png" id="2_clw4i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gyip0"]
 radius = 29.0689
@@ -12,14 +12,14 @@ collision_layer = 0
 collision_mask = 3
 script = ExtResource("1_qvcb0")
 
-[node name="Wizard" type="Sprite2D" parent="."]
-position = Vector2(-7.26, 0)
+[node name="Projectile" type="Sprite2D" parent="."]
+position = Vector2(-1.875, 0)
 rotation = -0.00854886
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("1_dx1gn")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_clw4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -4)
+position = Vector2(-1.19209e-07, -1.42109e-14)
 scale = Vector2(1.54, 1.54)
 shape = SubResource("CircleShape2D_gyip0")
 

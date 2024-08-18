@@ -10,7 +10,7 @@
 *Grumpy*  "I am a servant of the land, not of the staff."\
 *Serious*  "Night will soon come, I must be ready."
 
-***During the night***\
+**During the night**\
 *Furious*  "Foul wretch!"\
 *Furious*  "Treacherous roach!"\
 *Commanding*  "I seek no quarrel with vampires. Be gone!"\

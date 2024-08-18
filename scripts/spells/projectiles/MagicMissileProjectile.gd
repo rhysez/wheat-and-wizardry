@@ -2,7 +2,7 @@ extends Area2D
 
 const MOVE_SPEED = 300
 const MAX_RANGE = 1000
-const DAMAGE = 5
+const DAMAGE = 5.0
 
 var travel_distance = 0
 

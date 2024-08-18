@@ -4,7 +4,11 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Game/Characters/PlayerWizard")
 
 const MOVE_SPEED = 110
-var hit_points = 10
+var health = 15.0
+
+func _ready():
+	%VampireImpHealthBar.max_value = health
+	%VampireImpHealthBar.value = health
 
 func _physics_process(delta):
 	# We get the global position of PlayerWizard and distance towards it.
@@ -14,6 +18,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func take_damage(total_damage):
-	hit_points -= total_damage
-	if (hit_points <= 0):
+	health -= total_damage
+	%VampireImpHealthBar.value = health
+	if (health <= 0):
 		queue_free()

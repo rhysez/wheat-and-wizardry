@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcgs8ew2m7uda"]
+[gd_scene load_steps=8 format=3 uid="uid://dcgs8ew2m7uda"]
 
 [ext_resource type="Script" path="res://scripts/enemies/VampireImp.gd" id="1_1kckt"]
 [ext_resource type="Texture2D" uid="uid://b0b4vwrulrlu5" path="res://assets/enemies/VampireImp48.png" id="2_v0fvg"]
@@ -21,6 +21,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_c7xfe"]
 radius = 4.50759
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fme1m"]
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mquxv"]
+bg_color = Color(0.800602, 0.183836, 0.385198, 1)
+anti_aliasing = false
+
 [node name="VampireImp" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_1kckt")
@@ -34,3 +46,13 @@ sprite_frames = SubResource("SpriteFrames_pupx1")
 position = Vector2(0, 0.875)
 scale = Vector2(2.21, 2.21)
 shape = SubResource("CircleShape2D_c7xfe")
+
+[node name="VampireImpHealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -13.0
+offset_top = -17.0
+offset_right = 13.0
+offset_bottom = -14.0
+theme_override_styles/background = SubResource("StyleBoxFlat_fme1m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mquxv")
+show_percentage = false

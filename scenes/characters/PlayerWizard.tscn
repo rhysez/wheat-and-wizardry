@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbspp6gu8j6y"]
+[gd_scene load_steps=7 format=3 uid="uid://bbspp6gu8j6y"]
 
-[ext_resource type="Script" path="res://scripts/PlayerWizard.gd" id="1_bc7ab"]
+[ext_resource type="Script" path="res://scripts/characters/PlayerWizard.gd" id="1_bc7ab"]
 [ext_resource type="Texture2D" uid="uid://dfrljnxyx30q2" path="res://assets/characters/Wizard.png" id="1_kc0a2"]
+[ext_resource type="PackedScene" uid="uid://cca1rsgkew3ev" path="res://scenes/spells/MagicMissile.tscn" id="3_3lpr7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqjkc"]
 atlas = ExtResource("1_kc0a2")
@@ -19,17 +20,22 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mq1fp"]
-radius = 54.0093
+radius = 13.3417
 
 [node name="PlayerWizard" type="CharacterBody2D"]
 script = ExtResource("1_bc7ab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4, -1)
-scale = Vector2(0.09, 0.089)
+scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_ldq0g")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 15)
+position = Vector2(3, 4)
+scale = Vector2(4.295, 4.295)
 shape = SubResource("CircleShape2D_mq1fp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MagicMissile" parent="." instance=ExtResource("3_3lpr7")]

@@ -1,11 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbspp6gu8j6y"]
+[gd_scene load_steps=11 format=3 uid="uid://bbspp6gu8j6y"]
 
 [ext_resource type="Script" path="res://scripts/characters/PlayerWizard.gd" id="1_bc7ab"]
 [ext_resource type="Texture2D" uid="uid://dgeyl8sny8yia" path="res://assets/characters/Wizard48.png" id="2_6sftu"]
 [ext_resource type="PackedScene" uid="uid://cca1rsgkew3ev" path="res://scenes/spells/cast_indicators/MagicMissileCast.tscn" id="3_j7t1j"]
+[ext_resource type="Texture2D" uid="uid://p1hmqch5wn3o" path="res://assets/animations/characters/WizardRun1.png" id="3_r5xvr"]
+[ext_resource type="Texture2D" uid="uid://bo51q7iitkwet" path="res://assets/animations/characters/WizardRun2.png" id="4_x1rlc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_quylu"]
 atlas = ExtResource("2_6sftu")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xi07"]
+atlas = ExtResource("3_r5xvr")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oysm"]
+atlas = ExtResource("4_x1rlc")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ldq0g"]
@@ -17,6 +27,17 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xi07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oysm")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mq1fp"]
@@ -29,6 +50,7 @@ script = ExtResource("1_bc7ab")
 position = Vector2(0.71, 0.28)
 sprite_frames = SubResource("SpriteFrames_ldq0g")
 autoplay = "default"
+frame_progress = 0.23223
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.095, 4)

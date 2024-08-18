@@ -16,8 +16,8 @@ shape = SubResource("CircleShape2D_ev5jm")
 [node name="AimPivot" type="Marker2D" parent="."]
 
 [node name="CastIndicator" type="Sprite2D" parent="AimPivot"]
-position = Vector2(23.545, -2)
-scale = Vector2(0.485, 0.485)
+position = Vector2(30.245, -2)
+scale = Vector2(1.025, 1.025)
 texture = ExtResource("2_3ro2u")
 
 [node name="CastingPoint" type="Marker2D" parent="AimPivot/CastIndicator"]

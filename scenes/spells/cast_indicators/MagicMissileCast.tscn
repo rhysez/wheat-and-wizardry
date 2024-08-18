@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cca1rsgkew3ev"]
+
+[ext_resource type="Script" path="res://scripts/spells/MagicMissile.gd" id="1_o05sj"]
+[ext_resource type="Texture2D" uid="uid://df6xhjweyrpjs" path="res://assets/spells/cast_indicators/MagicMissileCast48.png" id="2_3ro2u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ev5jm"]
+radius = 83.8801
+
+[node name="MagicMissile" type="Area2D"]
+script = ExtResource("1_o05sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.82, 2.82)
+shape = SubResource("CircleShape2D_ev5jm")
+
+[node name="AimPivot" type="Marker2D" parent="."]
+
+[node name="CastIndicator" type="Sprite2D" parent="AimPivot"]
+position = Vector2(24.373, -2)
+scale = Vector2(0.525104, 0.54)
+texture = ExtResource("2_3ro2u")
+
+[node name="CastingPoint" type="Marker2D" parent="AimPivot/CastIndicator"]
+unique_name_in_owner = true
+position = Vector2(20.21, 3.739)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
